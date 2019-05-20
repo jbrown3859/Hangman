@@ -48,7 +48,10 @@ public class Hangman implements GameState {
 	}
 	public void makeMove(String moveLetter) {
 		
+		String move=moveLetter.toUpperCase();
+		
 		int pos = movesLeft.indexOf(move);
+		
 		if(pos == -1) {
 			incorrectMade++;
 			movesLeft.remove(move);
@@ -60,7 +63,7 @@ public class Hangman implements GameState {
 	}
 	@Override
 	public String toString() {
-		return
+		return "pls implement";
 	}
 
 }
