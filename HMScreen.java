@@ -35,8 +35,9 @@ public class HMScreen
 	
 	public void correct(String letter) {//implement
 		for(int i = 0; i < word.length(); i++) {
-			if(word.substring(i,i+1)==letter)
+			if(word.substring(i,i+1)==letter) {
 				Text disp = new Text(100+(i*13), 485, letter);
+			}
 		}
 	}
 
