@@ -8,12 +8,12 @@ public class Person
 	public Person() {
 		person=new Shape[6];
 		
-		person[0]=new Ellipse(new Point(225,75), 50, 50);
-		person[1]=new Line(new Point(250,125), new Point(250,200));
-		person[2]=new Line(new Point(250,200), new Point(225,225));
-		person[3]=new Line(new Point(250,200), new Point(275,225));
-		person[4]=new Line(new Point(250,160), new Point(225,150));
-		person[5]=new Line(new Point(250,160), new Point(275,150));
+		person[0]=new Ellipse(225,75, 50, 50);
+		person[1]=new Line(250,125, 250,200);
+		person[2]=new Line(250,200, 225,225);
+		person[3]=new Line(250,200, 275,225);
+		person[4]=new Line(250,160, 225,150);
+		person[5]=new Line(250,160, 275,150);
 	}
 	public void next() {
 		moves++;

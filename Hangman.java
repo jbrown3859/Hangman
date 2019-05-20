@@ -46,7 +46,8 @@ public class Hangman implements GameState {
 	public ArrayList<String> getCurrentMoves() {
 		return movesLeft;
 	}
-	public void makeMove(String move) {
+	public void makeMove(String moveLetter) {
+		
 		int pos = movesLeft.indexOf(move);
 		if(pos == -1) {
 			incorrectMade++;
