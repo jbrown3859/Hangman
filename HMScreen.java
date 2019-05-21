@@ -7,6 +7,8 @@ public class HMScreen
 	private Line underscore;
 	private int wrongs=0;
 	private String word;
+	private int c=0;
+	private boolean win=false;
 
 	public HMScreen(String wordGiven) {
 		
@@ -42,12 +44,19 @@ public class HMScreen
 			if(word.substring(i,i+1).equals(letter)) {
 				Text disp = new Text(100+(i*13), 485, letter);
 				disp.draw();
+				c++;
 			}
+		}
+		if(c==word.length()) {
+			win=true;
 		}
 	}
 	public void wrong() {
 		wrongs++;
 		person.next();
+	}
+	public boolean done() {
+		return win;
 	}
 
 }

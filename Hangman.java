@@ -34,7 +34,7 @@ public class Hangman implements GameState {
 		this("Player 1");
 	}
 	public boolean isGameOver() {
-		return incorrectLimit==incorrectMade || gameOver;
+		return incorrectLimit==incorrectMade || gameOver || board.done();
 	}
 	public Player getWinner() {
 		return player;
