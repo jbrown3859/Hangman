@@ -1,3 +1,3 @@
 javac *.java
-java GameDriver
+java play
 pause

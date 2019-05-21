@@ -16,7 +16,8 @@ public class Hangman implements GameState {
 	private HMScreen board;
 	//Constructors
     public Hangman(String name) {
-
+		word="alphabet";
+		word=word.toUpperCase();
 		board = new HMScreen(word);
 
 		player = new Player(name);
@@ -26,8 +27,7 @@ public class Hangman implements GameState {
 			movesLeft.add(alph.substring(i,i+1));		
 		}
 
-		word="alphabet";
-		word=word.toUpperCase();
+		
 
 		console=new EasyReader();
 	}
