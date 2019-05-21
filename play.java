@@ -1,6 +1,7 @@
 public class play {
 	public static void main(String[] args) {
-		GameDriver driver=new GameDriver(new Hangman("Joey"));
+		Hangman game = new Hangman("Joey");
+		GameDriver driver=new GameDriver(game);
 		driver.play();
 	}
 }

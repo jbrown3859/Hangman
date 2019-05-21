@@ -16,8 +16,8 @@ public class Person
 		person[5]=new Line(250,160, 275,150);
 	}
 	public void next() {
-		moves++;
 		person[moves].draw();
+		moves++;
 	}
 
 }
