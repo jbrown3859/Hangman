@@ -6,7 +6,7 @@ public class GameDriver
 	{
 		System.out.println(state);
 		while(!state.isGameOver()) {
-			state.makeMove(state.getCurrentPlayer().getNextMove());
+			state.makeMove(state.getCurrentPlayer().getNextMove(state));
 		}
 		if(state.getWinner()==null)
 			System.out.println("Game ends in a draw");

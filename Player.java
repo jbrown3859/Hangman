@@ -6,6 +6,6 @@ public class Player
 	public Player(String aName) {name=aName; console = new EasyReader();}
 	public String getName() {return name;}
 	public String getNextMove(GameState state) {
-		return console.readChar();
+		return console.readWord();
 	}
 }

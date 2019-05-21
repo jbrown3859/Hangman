@@ -6,9 +6,12 @@ public class HMScreen
 	private Person person;
 	private Line underscore;
 	private int wrongs=0;
+	private String word;
 
-	public HMScreen(String word) {
+	public HMScreen(String wordGiven) {
 		
+		word=wordGiven;
+
 		for(int i = 0; i < word.length(); i++) {
 			underscore=new Line(100+(i*13),500, 110+(i*13),500);
 			underscore.draw();
@@ -30,7 +33,7 @@ public class HMScreen
 	public void wrong(String letter) {
 		wrongs++;
 		person.next();
-		Text disp = new Text(100+(i*13), 515, letter);
+		Text disp = new Text(100+(wrongs*13), 515, letter);
 	}
 	
 	public void correct(String letter) {//implement

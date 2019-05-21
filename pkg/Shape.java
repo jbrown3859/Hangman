@@ -36,4 +36,6 @@ public interface Shape
      * @param g2 the graphics object
      */
     void paintShape(Graphics2D g2);
+
+	void draw();
 }
