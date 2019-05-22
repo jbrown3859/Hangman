@@ -1,6 +1,9 @@
 import pkg.*;
 import java.util.ArrayList;
-
+import java.util.*; 
+import java.nio.charset.StandardCharsets; 
+import java.nio.file.*; 
+import java.io.*; 
 
 public class Hangman implements GameState {
 	
@@ -16,9 +19,39 @@ public class Hangman implements GameState {
 	private boolean gameOver = false;
 
 	private HMScreen board;
+	
+	private List<String> readLines(String fileName) {
+		List<String> lines = Collections.emptyList(); 
+		try { 
+			lines = Files.readAllLines(Paths.get(fileName), StandardCharsets.UTF_8); 
+		} 
+  
+		catch (IOException e) 
+		{ 
+  
+		// do something 
+		e.printStackTrace(); 
+		} 
+		return lines; 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//Constructors
+
+
+
+
     public Hangman(String name) {
-		word="alphabet";
+		word=readLines("words.txt").get((int)(Math.random() * readLines("words.txt").size()));
 		word=word.toUpperCase();
 		board = new HMScreen(word);
 
